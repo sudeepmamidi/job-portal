@@ -1,0 +1,88 @@
+<form (ngSubmit)="createOrUpdate()">
+  <div class="form-group">
+    <label for="id">Job ID </label>
+      <input type="text" name="jobId" name="jobId" [(ngModel)]="jobpost.jobId" class="form-control" id="inputEmail4" >
+  </div>
+
+  <div class="form-group">
+    <label for="id">jobTitle </label>
+      <input type="text" name="jobTitle" name="jobTitle" [(ngModel)]="jobpost.jobTitle" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="id">jobPostedDate </label>
+      <input type="text" name="jobPostedDate" [(ngModel)]="jobpost.jobPostedDate" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label for="id">role</label>
+      <input type="text" name="role" [(ngModel)]="jobpost.role" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">responsibility</label>
+      <input type="text" name="responsibility" [(ngModel)]="jobpost.responsibility" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">companyName</label>
+      <input type="text" name="companyName" [(ngModel)]="jobpost.companyName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">experience</label>
+      <input type="text" name="experience" [(ngModel)]="jobpost.experience" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">salaryRange</label>
+      <input type="text" name="salaryRange" [(ngModel)]="jobpost.salaryRange" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">noOfPositions</label>
+      <input type="text" name="responsibility" name="noOfPositions" [(ngModel)]="jobpost.noOfPositions" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">location</label>
+      <input type="text" name="location" [(ngModel)]="jobpost.location" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">skillsAndQualifications</label>
+      <input type="text" name="skillsAndQualifications" [(ngModel)]="jobpost.skillsAndQualifications" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">degree</label>
+      <input type="text" name="degree" [(ngModel)]="jobpost.degree" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">companyInfo</label>
+      <input type="text" name="companyInfo" [(ngModel)]="jobpost.companyInfo" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">employmentType</label>
+      <input type="text" name="employmentType" [(ngModel)]="jobpost.employmentType" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">industryType</label>
+      <input type="text" name="industryType" [(ngModel)]="jobpost.industryType" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">search</label>
+      <input type="text" name="search" [(ngModel)]="jobpost.search" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="id">jobDescription</label>
+      <input type="text" name="jobDescription" [(ngModel)]="jobpost.jobDescription" class="form-control">
+  </div>
+
+  <input type="submit" value="submit" class="btn btn-success">
+</form>

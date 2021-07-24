@@ -1,0 +1,56 @@
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title text-center">Admin jobs List</h4>
+    <table class="table table-hover">
+
+      <thead>
+        <tr>
+          <th>JobID</th>
+          <th>JobName</th>
+          <th>job Posted Date</th>
+          <th>role</th>
+          <th>responsibility</th>
+          <th>companyName</th>
+          <th>experience</th>
+          <th>salaryRange</th>
+          <th>noOfPositions</th>
+          <th>location</th>
+          <th>skillsAndQualifications</th>
+          <th>degree</th>
+          <th>companyInfo</th>
+          <th>employmentType</th>
+          <th>industryType</th>
+          <th>search</th>
+          <th>jobDescription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jobpost of this.jobposts">
+         <td>{{jobpost.jobId}}</td>
+         <td>{{jobpost.jobTitle}}</td>
+         <td>{{jobpost.jobPostedDate}}</td>
+         <td>{{jobpost.role}}</td>
+         <td>{{jobpost.responsibility}}</td>
+         <td>{{jobpost.companyName}}</td>
+         <td>{{jobpost.experience}}</td>
+         <td>{{jobpost.salaryRange}}</td>
+         <td>{{jobpost.noOfPositions}}</td>
+         <td>{{jobpost.location}}</td>
+         <td>{{jobpost.skillsAndQualifications}}</td>
+         <td>{{jobpost.degree}}</td>
+         <td>{{jobpost.companyInfo}}</td>
+         <td>{{jobpost.employmentType}}</td>
+         <td>{{jobpost.industryType}}</td>
+         <td>{{jobpost.search}}</td>
+         <td>{{jobpost.jobDescription}}</td>
+         <td><button class="btn btn-danger" (click)="doDelete(jobpost)">Delete</button>
+          <button class="btn btn-primary" (click)="doUpdate(jobpost)">Update</button>
+        </td>
+        </tr>
+      </tbody>
+
+
+
+    </table>
+</div>
