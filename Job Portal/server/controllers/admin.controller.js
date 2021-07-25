@@ -165,3 +165,22 @@ module.exports.getbycompany = async(req,res)=>{
         })
     }
 }
+
+
+module.exports.getjobsbyid = async(req,res)=>{
+    const id =  req.params.id;
+    if(id==null)
+    {
+        res.send("Id required");
+    }
+    else{
+        Admin.findById({_id:req.params.id},(err,doc)=>{
+            if(err){
+                doc.status(500).json({errmsg:err});
+            }
+            else{
+                res.status(200).json({msg:doc});
+            }
+        })
+    }
+}

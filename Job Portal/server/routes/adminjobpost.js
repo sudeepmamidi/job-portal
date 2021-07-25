@@ -12,6 +12,8 @@ router.put('/update',ctrlAdmin.updatedata);
 
 router.delete('/delete/:id',ctrlAdmin.deletedata);
 
+router.get('/jobs/:id',ctrlAdmin.getjobsbyid);
+
 router.get('/filter',ctrlAdmin.filterbysearchandlocation);
 
 router.get('/searchbyrole',ctrlAdmin.searchbyrole);

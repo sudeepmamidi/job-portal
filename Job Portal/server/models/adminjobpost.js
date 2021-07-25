@@ -57,6 +57,6 @@ var adminjobpostSchema = new mongoose.Schema({
         type:String,
     }
 
-});
+},{timestamps: true});
 
 mongoose.model('Adminjobposts', adminjobpostSchema);

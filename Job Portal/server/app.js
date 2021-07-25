@@ -11,7 +11,7 @@ const rtsIndex = require('./routes/index.router');
 const adminIndex = require('./routes/adminjobpost');
 const adminprofile = require('./routes/adminprofile');
 const personaldetails = require('./routes/personaldetails');
-const employement = require('./models/employement')
+const employement = require('./models/employement');
 
 var app = express();
 
@@ -23,7 +23,7 @@ app.use('/api', rtsIndex);
 app.use('/admin',adminIndex);
 app.use('/adminprofile',adminprofile);
 app.use('/users',personaldetails);
-app.use('/userapi',employement);
+app.use('/users',employement);
 // error handler
 app.use((err, req, res, next) => {
     if (err.name === 'ValidationError') {

@@ -4,8 +4,6 @@ const _ = require('lodash');
 
 const Personaldetails = mongoose.model('Personaldetails');
 
-const employement = require('../models/employement')
-
 // const User = mongoose.model('User');
 
 module.exports.postdetails = (req, res, next) => {
@@ -32,4 +30,16 @@ module.exports.postdetails = (req, res, next) => {
         }
 
     });
+}
+
+
+module.exports.getpersonaldata = async(req,res)=>{
+    Personaldetails.findById({_id:req.params.id},(err,doc)=>{
+        if(err){
+            doc.status(500).json({errmsg:err});
+        }
+        else{
+            res.status(200).json({msg:doc});
+        }
+    })
 }

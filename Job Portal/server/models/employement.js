@@ -2,34 +2,28 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-var employmentShema = new mongoose.Schema({
+var employementSchema = new mongoose.Schema({
     currentemployeer: {
         type: String,
-        required: 'currentemployeer can\'t be empty'
+        required: 'currentemployeer name can\'t be empty'
     },
     destination: {
         type: String,
-        required: 'Password can\'t be empty',
+        required: 'destination name can\'t be empty'
     },
     jobdescription: {
         type: String,
-        required: 'Password can\'t be empty',
-    },
-    experience: {
-        type: String,
-        required: 'Password can\'t be empty',
+        required: 'jobdescription name can\'t be empty'
     },
     previousemployer: {
         type: String,
-        required: 'Password can\'t be empty',
     },
     previousjobdescription: {
         type: String,
-        required: 'Password can\'t be empty',
     },
     previousexperience: {
         type: String,
-        required: 'Password can\'t be empty',
-    },
+    },   
 });
-mongoose.model('employment', employmentShema);
+var employement = mongoose.model('Employement', employementSchema);
+module.exports = employement;

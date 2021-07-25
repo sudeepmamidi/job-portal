@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const employement = require('../models/employement')
 
-const employementCtrl = require('../controllers/employement.controller');
 
-//const jwtHelper = require('../config/jwtHelper');
+const empCtrl = require('../controllers/personaldetails.controller');
 
-router.post('/postemployement',employementCtrl.postemployement);
+router.post('/postempdetails',detailsCtrl.postdetails);
+
+router.get('/getpersonaldetals/:id',detailsCtrl.getpersonaldata);
 
 
 
