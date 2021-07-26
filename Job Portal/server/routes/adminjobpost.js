@@ -26,6 +26,8 @@ router.get('/tcs',ctrlAdmin.gettcs);
 
 router.get('/getbycompany/:companyName',ctrlAdmin.getbycompany);
 
+router.get('/gettop',ctrlAdmin.gettopjobs)
+
 
 
 

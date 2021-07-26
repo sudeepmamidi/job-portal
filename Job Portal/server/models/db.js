@@ -9,4 +9,5 @@ require('./user.model');
 require('./adminjobpost');
 require('./adminprofile');
 require('./personaldetails');
-require('./employement');
+require('./saved');
+require('./applied');

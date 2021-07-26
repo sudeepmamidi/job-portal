@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const _ = require('lodash');
 const e = require('express');
+const { isDate } = require('lodash');
 
 // const User = mongoose.model('User');
 
@@ -27,8 +28,9 @@ module.exports.jobpost = (req, res, next) => {
     admin.search = req.body.search;
     admin.jobDescription = req.body.jobDescription;
     admin.save((err, doc) => {
-        if (!err)
+        if (!err){
             res.send(doc);
+        }
         else {
                 return next(err);
         }
@@ -183,4 +185,10 @@ module.exports.getjobsbyid = async(req,res)=>{
             }
         })
     }
+}
+
+module.exports.gettopjobs = (req,res)=>{
+//    var result = Admin.find({timeStamp : createdAt}).count(5)
+//    console.log(result);
+//    res.send(result); 
 }

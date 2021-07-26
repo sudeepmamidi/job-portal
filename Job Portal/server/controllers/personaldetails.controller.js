@@ -19,6 +19,20 @@ module.exports.postdetails = (req, res, next) => {
     personaldetails.year = req.body.year;
     personaldetails.month = req.body.month;
     personaldetails.skills = req.body.skills;
+    personaldetails.currentemployer = req.body.currentemployer;
+    personaldetails.destination = req.body.destination;
+    personaldetails.jobdescription = req.body.jobdescription;
+    personaldetails.experienceinmonths = req.body.experienceinmonths;
+    personaldetails.previousemployer = req.body.previousemployer;
+    personaldetails.previousjobdescription = req.body.previousjobdescription;
+    personaldetails.previousexperienceinmonths = req.body.previousexperienceinmonths;
+    personaldetails.college = req.body.college;
+    personaldetails.yearpassed = req.body.yearpassed;
+    personaldetails.graduated = req.body.graduated;
+    personaldetails.graduateschool = req.body.graduateschool;
+    personaldetails.numberofyearsattend = req.body.numberofyearsattend;
+    personaldetails.skillsorqualifications = req.body.skillsorqualifications;
+    personaldetails.certification = req.body.certification;
     personaldetails.save((err, doc) => {
         if (!err)
             res.send(doc);
@@ -26,6 +40,7 @@ module.exports.postdetails = (req, res, next) => {
             if (err.code == 11000)
                 res.status(422).send(['Duplicate email adrress found.']);
             else
+                res.remove();
                 return next(err);
         }
 

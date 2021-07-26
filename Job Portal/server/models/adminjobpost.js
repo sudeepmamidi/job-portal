@@ -55,6 +55,10 @@ var adminjobpostSchema = new mongoose.Schema({
     },
     jobDescription:{
         type:String,
+    },
+    forsort:{
+        type:Number,
+        default:0
     }
 
 },{timestamps: true});

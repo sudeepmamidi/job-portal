@@ -8,8 +8,30 @@ module.exports.register = (req, res, next) => {
     var user = new User();
     user.fullName = req.body.fullName;
     user.email = req.body.email;
-    user.admin = req.body.admin;
     user.password = req.body.password;
+    user.mobile = req.body.mobile;
+    user.address = req.body.address;
+    user.city = req.body.city;
+    user.state = req.body.state;
+    user.postalcode = req.body.postalcode;
+    user.country = req.body.country;
+    user.year = req.body.year;
+    user.month = req.body.month;
+    user.skills = req.body.skills;
+    user.currentemployer = req.body.currentemployer;
+    user.destination = req.body.destination;
+    user.jobdescription = req.body.jobdescription;
+    user.experienceinmonths = req.body.experienceinmonths;
+    user.previousemployer = req.body.previousemployer;
+    user.previousjobdescription = req.body.previousjobdescription;
+    user.previousexperienceinmonths = req.body.previousexperienceinmonths;
+    user.college = req.body.college;
+    user.yearpassed = req.body.yearpassed;
+    user.graduated = req.body.graduated;
+    user.graduateschool = req.body.graduateschool;
+    user.numberofyearsattend = req.body.numberofyearsattend;
+    user.skillsorqualifications = req.body.skillsorqualifications;
+    user.certification = req.body.certification;
     user.save((err, doc) => {
         if (!err)
             res.send(doc);

@@ -51,11 +51,62 @@ var personalSchema = new mongoose.Schema({
         type: String,
         required: 'skills name can\'t be empty'
     },
-    employment:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'employment'
+    currentemployer: {
+        type: String,
+        required: 'currentemployer name can\'t be empty'
     },
-
-
-});
+    destination: {
+        type: String,
+        required: 'destination name can\'t be empty'
+    },
+    jobdescription: {
+        type: String,
+        required: 'jobdescription name can\'t be empty'
+    },
+    experienceinmonths: {
+        type: Number,
+        max:2,
+        required: 'experienceinmonths name can\'t be empty'
+    },
+    previousemployer: {
+        type: String,
+        required: 'previousemployer name can\'t be empty'
+    },
+    previousjobdescription: {
+        type: String,
+        required: 'previousjobdescription name can\'t be empty'
+    },
+    previousexperienceinmonths: {
+        type: String,
+        required: 'previousexperienceinmonths name can\'t be empty'
+    },
+    college: {
+        type: String,
+        required: 'skills name can\'t be empty'
+    },
+    yearpassed: {
+        type: Number,
+        required: 'skills name can\'t be empty'
+    },
+    graduated: {
+        type: String,
+        required: 'skills name can\'t be empty'
+    },
+    graduateschool: {
+        type: String,
+        required: 'skills name can\'t be empty'
+    },
+    numberofyearsattend: {
+        type: Number,
+        required: 'skills name can\'t be empty'
+    },
+    skillsorqualifications: {
+        type: String,
+        required: 'skills name can\'t be empty'
+    },
+    certification: {
+        type: String,
+        required: 'skills name can\'t be empty'
+    },
+},{timestamps: true});
 mongoose.model('Personaldetails', personalSchema);
