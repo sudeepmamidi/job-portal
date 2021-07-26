@@ -67,3 +67,18 @@ module.exports.userProfile = (req, res, next) =>{
         }
     );
 }
+
+module.exports.updateuserbyid = async(req,res)=>{
+    try{
+        const id = req.params.id;
+        const updates = req.body;
+        const options = {new:true}
+
+        const results = await User.findByIdAndUpdate(id,updates,options)
+        res.send(results);
+
+    }
+    catch(error){
+        console.log(error.message)
+    }
+}
