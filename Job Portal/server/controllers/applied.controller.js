@@ -17,3 +17,17 @@ module.exports.appliedJobs = (req, res, next) => {
     });
 
    }
+
+
+   //api for get applied: http://localhost:3000/apply/getapplied
+
+   module.exports.getallapplied = async(req,res)=>{
+    var result = await Applied.find({},(err,doc)=>{
+        if(!err){
+            res.send(doc);
+        }
+        else{
+            res.send('error');
+        }
+    });
+}

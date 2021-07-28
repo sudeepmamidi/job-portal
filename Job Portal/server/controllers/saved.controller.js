@@ -15,3 +15,17 @@ module.exports.postsavedId = (req, res, next) => {
 
     });
 }
+
+
+//api: http://localhost:3000/save/getsaved
+
+module.exports.getallsaved = async(req,res)=>{
+    var result = await Saved.find({},(err,doc)=>{
+        if(!err){
+            res.send(doc);
+        }
+        else{
+            res.send('error');
+        }
+    });
+}
