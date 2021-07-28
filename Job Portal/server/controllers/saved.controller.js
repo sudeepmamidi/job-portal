@@ -29,3 +29,24 @@ module.exports.getallsaved = async(req,res)=>{
         }
     });
 }
+
+
+//deleteApi :http://localhost:3000/save/deletesaved/61010a246ea9760758a4ae06
+
+module.exports.deletesavedyid = async(req,res)=>{
+    const id = req.params.id
+    if(id==null)
+    {
+        res.send('id required in parameters');
+    }
+    else{
+        Saved.findByIdAndRemove({_id:req.params.id},(err,doc)=>{
+            if(err){
+                doc.status(500).json({errmsg:err});
+            }
+            else{
+                res.status(200).json({msg:doc});
+            }
+        })
+    }
+}
