@@ -3,17 +3,98 @@ const passport = require('passport');
 
 const Saved = mongoose.model('Saved')
 
-module.exports.postsavedId = (req, res, next) => {
-    var saved = new Saved();
-    saved.id = req.params.id;
-    saved.save((err, doc) => {
-        if (!err)
-            res.send(doc);
-        else {
-            return next(err);
-        }
 
-    });
+//api:http://localhost:3000/save/saved/60f036ee523424348c8f7c6a
+
+module.exports.postsavedId = (req, res, next) => {
+
+
+   
+ 
+        var query = req.params.id
+        Saved.findOne({id:query}, function(err, example){
+            if(err) console.log(err);
+            if ( example){
+                res.send("You have already been saved this Job");
+            } else {
+     
+                var saved = new Saved();
+                saved.id = req.params.id;
+                saved.save(function(err, example) {
+                    if(err) console.log(err);
+                    res.send(example);
+                });
+            }
+        });
+
+            //     var saved = new Saved();
+            //     saved.id = req.params.id;
+            //     saved.save((err, doc) => {
+            //         if (!err)
+            //         if(doc.id!=req.params.id){
+            //             // doc.remove();
+            //             res.send("Your id inserted"+doc.id);
+            //         }
+            //         else{
+            //             // console.log(doc.id);
+            //              res.send("doc");
+            //             doc.remove();
+            //             // return next(err);
+            //         }
+            //             //res.send(doc);
+            //         else {
+                        
+            //         //    Saved.findOne({id:req.params.id},(err,result)=>{
+            //         //        if(err)
+            //         //        {
+            //        res.send(err);
+            //         //        }
+            //         //        else{
+            //         //            if(result.id==req.params.id){
+            //         //             //    result.remove();
+            //         //                res.send("you have already Saved");
+            //         //            }
+            //         //            else{
+            //         //                res.send(result);
+            //         //            }
+            //         //        }
+            //         //    })
+            //         }
+            //     });
+            // }
+
+    // Saved.findOne({id:req.params.id},(err,result)=>{
+    //     if(err){
+    //         res.send(err);
+    //     }
+    //     else{
+    //         if(result.id!=req.params.id){
+    //             res.send("You have already saved this job");
+    //             var saved = new Saved();
+    //             saved.id = req.params.id;
+    //             saved.save((err, doc) => {
+    //                 if (!err)
+    //                     res.send(doc);
+    //                 else {
+    //                     return next(err);
+    //                 }
+    //             });
+    //         }
+    //         else{
+    //             res.send("You have already saved this job");
+    //             var saved = new Saved();
+    //             saved.id = req.params.id;
+    //             saved.save((err, doc) => {
+    //                 if (!err)
+    //                     res.send(doc);
+    //                 else {
+    //                     return next(err);
+    //                 }
+    //             });
+    //         }
+    //     }
+    // })
+    
 }
 
 
@@ -28,6 +109,7 @@ module.exports.getallsaved = async(req,res)=>{
             res.send('error');
         }
     });
+
 }
 
 
