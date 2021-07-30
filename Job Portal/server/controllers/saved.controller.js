@@ -108,7 +108,8 @@ module.exports.getallsaved = async(req,res)=>{
         else{
             res.send('error');
         }
-    });
+    })
+    .populate({ path: 'id', select: ['jobId','jobTitle','role','companyName'] });
 
 }
 

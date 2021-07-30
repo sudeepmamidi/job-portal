@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 var appliedSchema = new mongoose.Schema({
     id:{
         type:mongoose.Schema.Types.ObjectId,  
+        ref:'Adminjobposts'
     }
 },{timestamps:true});
 
