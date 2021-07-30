@@ -11,8 +11,30 @@ export class UserService {
   selectedUser: User = {
     fullName: '',
     email: '',
-    admin:'',
-    password: ''
+    password: '',
+    mobile:null,
+    address:'',
+    city:'',
+    state:'',
+    postalcode:null,
+    country:'',
+    year:null,
+    month:null,
+    skills:'',
+    currentemployer:'',
+    destination:'',
+    jobdescription:'',
+    experienceinmonths:'',
+    previousemployer:'',
+    previousjobdescription:'',
+    previousexperienceinmonths:'',
+    college:'',
+    yearpassed:'',
+    graduated:'',
+    graduateschool:'',
+    numberofyearsattend:'',
+    skillsorqualifications:'',
+    certification:''
   };
 
   noAuthHeader = { headers: new HttpHeaders({ 'NoAuth': 'True' }) };

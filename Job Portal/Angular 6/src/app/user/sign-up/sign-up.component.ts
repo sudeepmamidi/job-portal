@@ -39,8 +39,30 @@ export class SignUpComponent implements OnInit {
     this.userService.selectedUser = {
       fullName: '',
       email: '',
-      admin:'',
-      password: ''
+      password: '',
+      mobile:null,
+      address:'',
+    city:'',
+    state:'',
+    postalcode:null,
+    country:'',
+    year:null,
+    month:null,
+    skills:'',
+    currentemployer:'',
+    destination:'',
+    jobdescription:'',
+    experienceinmonths:'',
+    previousemployer:'',
+    previousjobdescription:'',
+    previousexperienceinmonths:'',
+    college:'',
+    yearpassed:'',
+    graduated:'',
+    graduateschool:'',
+    numberofyearsattend:'',
+    skillsorqualifications:'',
+    certification:''
     };
     form.resetForm();
     this.serverErrorMessages = '';

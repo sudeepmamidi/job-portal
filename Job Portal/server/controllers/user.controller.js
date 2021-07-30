@@ -4,6 +4,37 @@ const _ = require('lodash');
 
 const User = mongoose.model('User');
 
+
+//Document: {
+//     "fullName":"sudeep",
+//     "email":"mamidisudeep98@gmail.com",
+//     "password":"sudeep",
+//     "mobile": 9177716749,
+//     "address": "1-32/a",
+//     "city": "Nizamabad",
+//     "state": "telangana",
+//     "postalcode": 503224,
+//     "country": "india",
+//     "year": 2021,
+//     "month": 6,
+//     "skills": "java,nodejs",
+//     "currentemployer": "NA",
+//     "destination": "NA",
+//     "jobdescription": "NA",
+//     "experienceinmonths": 0,
+//     "previousemployer": "NA",
+//     "previousjobdescription": "NA",
+//     "previousexperienceinmonths": "NA",
+//     "college": "GCTC",
+//     "yearpassed": 2020,
+//     "graduated": "NA",
+//     "graduateschool": "NA",
+//     "numberofyearsattend": 4,
+//     "skillsorqualifications": "NA",
+//     "certification": "NA"
+
+// }
+
 module.exports.register = (req, res, next) => {
     var user = new User();
     user.fullName = req.body.fullName;
