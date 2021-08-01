@@ -22,6 +22,7 @@ import {AdminService} from './shared/admin.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminAddUpdateComponent } from './admin-add-update/admin-add-update.component';
 import { NavuserComponent } from './navuser/navuser.component';
+import { SignupComponent } from './admin/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavuserComponent } from './navuser/navuser.component';
     AdminlistComponent,
     NavbarComponent,
     AdminAddUpdateComponent,
-    NavuserComponent
+    NavuserComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

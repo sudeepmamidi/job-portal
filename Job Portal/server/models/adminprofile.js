@@ -3,9 +3,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 var adminprofileSchema = new mongoose.Schema({
-    fullName: {
+    email: {
         type: String,
-        required: 'Full name can\'t be empty'
+        required: 'email can\'t be empty'
     },
     password: {
         type: String,

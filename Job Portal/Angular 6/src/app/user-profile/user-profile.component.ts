@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { Router } from "@angular/router";
+import { User } from '../shared/user.model';
 
 @Component({
   selector: 'app-user-profile',
@@ -26,6 +27,10 @@ export class UserProfileComponent implements OnInit {
   onLogout(){
     this.userService.deleteToken();
     this.router.navigate(['/login']);
+  }
+
+  onEdit(userDetails:User){
+   console.log(userDetails);
   }
 
 }

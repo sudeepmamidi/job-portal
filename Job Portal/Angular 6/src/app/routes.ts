@@ -7,6 +7,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
 import { AdminAddUpdateComponent } from './admin-add-update/admin-add-update.component';
+import { SignupComponent } from './admin/signup/signup.component';
 
 export const appRoutes: Routes = [
     {
@@ -28,6 +29,9 @@ export const appRoutes: Routes = [
     },
     {
         path: 'adminaddupdate', component: AdminAddUpdateComponent
+    },
+    {
+        path: 'admin/signup', component: SignupComponent
     },
     {
         path: '', redirectTo: '/login', pathMatch: 'full'

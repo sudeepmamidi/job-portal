@@ -4,16 +4,25 @@ import { Observable } from 'rxjs';
 
 
 import { Jobpost } from './jobpost';
-
+import { Admin } from './admin.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
+  selectAdmin:Admin = {
+    email:'',
+    password:''
+  };
   private jobpost:Jobpost;
   private baseUri:string= "http://localhost:3000/admin/";
+  private baseuriprofile:string = "http://localhost:3000/adminprofile/"
   private headers = new HttpHeaders().set('Content-Type','application/json');
   constructor(private http:HttpClient) { }
+
+  postAdmin(admin:Admin){
+    return this.http.post(this.baseuriprofile+'/register',admin,{headers:this.headers});
+  }
 
   jobsposts;
 
