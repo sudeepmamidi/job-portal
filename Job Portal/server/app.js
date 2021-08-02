@@ -1,7 +1,7 @@
 require('./config/config');
 require('./models/db');
 require('./config/passportConfig');
-require('./config/adminpass');
+// require('./config/adminpass');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -20,6 +20,7 @@ var app = express();
 // middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(passport.initialize());
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
 app.use('/admin',adminIndex);
