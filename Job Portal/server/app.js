@@ -21,7 +21,6 @@ var app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(passport.initialize());
-app.use(passport.initialize());
 app.use('/api', rtsIndex);
 app.use('/admin',adminIndex);
 app.use('/adminprofile',adminprofile);
